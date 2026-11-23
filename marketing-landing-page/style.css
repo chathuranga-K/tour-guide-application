@@ -50,3 +50,16 @@ h1, h2, h3 { font-family: "Poppins", "Inter", sans-serif; color: var(--ink); lin
 .section-head p { color: var(--muted); font-size: 1.05rem; margin: 0; }
 .section-head.center { text-align: center; margin-inline: auto; }
 
+.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 1.7rem;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  line-height: 1;
+  display: inline-flex;
+  align-items: baseline;
+}
+.logo .b { color: var(--blue); }
+.logo--light { color: #fff; }
+
