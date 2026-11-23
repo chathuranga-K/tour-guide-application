@@ -3,8 +3,6 @@
 <!-- 🖼️ LOGO PLACEHOLDER: replace with your logo, e.g. ./docs/assets/logo.png -->
 <img src="logo-yourguide.png" alt="Your Guide Logo" width="240" />
 
-# LankaGuide
-
 **Discover Sri Lanka with verified local guides, on your own terms.**
 
 A web and mobile platform connecting local and foreign tourists with SLTD-verified tour guides and travel agencies, featuring customisable tours, AI-powered recommendations, live location sharing and a social "For You" feed.
