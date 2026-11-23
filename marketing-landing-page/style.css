@@ -99,3 +99,44 @@ h1, h2, h3 { font-family: "Poppins", "Inter", sans-serif; color: var(--ink); lin
 .btn--white:hover { background: #f1f8ff; box-shadow: 0 14px 28px rgba(0,0,0,.28), 0 0 0 5px rgba(255,255,255,.25); }
 .btn--sm { padding: 10px 20px; font-size: .9rem; }
 
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, .92);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; height: 72px; gap: 20px; }
+.nav__links { display: flex; align-items: center; gap: 28px; font-weight: 500; font-size: .95rem; white-space: nowrap; }
+.nav__links a:not(.btn) { padding: 6px 0; position: relative; }
+.nav__links a:not(.btn)::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 2px; background: var(--blue);
+  transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+}
+.nav__links a:not(.btn):hover::after { transform: scaleX(1); }
+.nav .logo { flex: none; }
+.nav .btn { white-space: nowrap; }
+
+
+.nav__check { position: absolute; opacity: 0; pointer-events: none; width: 1px; height: 1px; }
+.nav__burger {
+  display: none; width: 46px; height: 46px; border-radius: 14px; border: 1px solid var(--line);
+  background: #fff; cursor: pointer; align-items: center; justify-content: center; flex: none;
+  transition: background .2s ease, box-shadow .2s ease;
+}
+.nav__burger:hover { box-shadow: 0 8px 20px rgba(4,137,235,.18); }
+.nav__burger span, .nav__burger span::before, .nav__burger span::after {
+  display: block; width: 20px; height: 2px; background: var(--ink); border-radius: 2px;
+  transition: transform .25s ease, background .2s ease, top .25s ease;
+}
+.nav__burger span { position: relative; }
+.nav__burger span::before, .nav__burger span::after { content: ""; position: absolute; left: 0; }
+.nav__burger span::before { top: -6px; }
+.nav__burger span::after { top: 6px; }
+.nav__check:focus-visible + .nav__burger { outline: 3px solid rgba(4,137,235,.5); outline-offset: 2px; }
+.nav__check:checked + .nav__burger span { background: transparent; }
+.nav__check:checked + .nav__burger span::before { top: 0; transform: rotate(45deg); }
+.nav__check:checked + .nav__burger span::after { top: 0; transform: rotate(-45deg); }
+.nav__links a:not(.btn):hover { color: var(--blue); }
+
