@@ -284,6 +284,58 @@
     </section>
 
   </main>
+ <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <a href="#top" class="logo logo--light" aria-label="YourGuide.lk"><span class="b">Your</span>Guide<span class="b">.lk</span></a>
+          <p style="margin-top:14px;max-width:300px;">Sri Lanka's trusted platform to find, customise and book SLTDA-verified tour guides and agencies.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#how">How it works</a></li>
+            <li><a href="#safety">Safety</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Community</h4>
+          <ul>
+            <li><a href="#guides">For guides</a></li>
+            <li><a href="#guides">For agencies</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@yourguide.lk">hello@yourguide.lk</a></li>
+            <li>Sri Lanka</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 YourGuide.lk. All rights reserved.</span>
+        <span>University project &ndash; Agile Team Project, 5COSC021C.Y</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Optional: closes the mobile menu after tapping a link or pressing Esc. The menu itself works with CSS only. */
+    (function () {
+      var t = document.getElementById("nav-toggle");
+      if (!t) return;
+      document.querySelectorAll(".nav__links a").forEach(function (a) {
+        a.addEventListener("click", function () { t.checked = false; });
+      });
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape") t.checked = false; });
+    })();
+  </script>
+
+</body>
+</html>
 
 
 
