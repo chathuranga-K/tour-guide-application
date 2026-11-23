@@ -368,4 +368,13 @@ h1, h2, h3 { font-family: "Poppins", "Inter", sans-serif; color: var(--ink); lin
 .store:active { transform: translateY(-1px) scale(.98); }
 .store:focus-visible { outline: 3px solid #fff; outline-offset: 4px; }
 
+.site-footer { background: var(--ink); color: #aab4be; padding: 56px 0 28px; font-size: .94rem; }
+.footer__grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 36px; margin-bottom: 36px; }
+.site-footer h4 { color: #fff; font-family: "Poppins", sans-serif; font-size: .95rem; margin: 0 0 14px; }
+.site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.site-footer a:hover { color: #fff; }
+.footer__bottom {
+  border-top: 1px solid #222930; padding-top: 22px; display: flex; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap; font-size: .85rem;
+}
 
