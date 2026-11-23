@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- 🖼️ LOGO PLACEHOLDER: replace with your logo, e.g. ./docs/assets/logo.png -->
-<img src="./logo.svg" alt="logo-yourguide.png" width="240" />
+<img src="logo-yourguide.png" alt="Your Guide Logo" width="240" />
 
 # LankaGuide
 
