@@ -226,3 +226,44 @@ h1, h2, h3 { font-family: "Poppins", "Inter", sans-serif; color: var(--ink); lin
 .problem__item h3 { color: #fff; font-size: 1.05rem; margin-bottom: 8px; }
 .problem__item p { margin: 0; font-size: .95rem; }
 
+.features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.feature {
+  position: relative; overflow: hidden; isolation: isolate;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 28px;
+  transition: transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s ease, border-color .35s ease;
+}
+
+.feature::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; opacity: 0;
+  background: linear-gradient(145deg, #25a2ff 0%, var(--blue) 45%, var(--blue-dark) 100%);
+  transition: opacity .35s ease;
+}
+
+.feature::after {
+  content: ""; position: absolute; z-index: -1; top: -60px; right: -60px; width: 190px; height: 190px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.28), rgba(255,255,255,0) 70%);
+  transform: scale(.4); opacity: 0;
+  transition: transform .5s cubic-bezier(.2,.8,.2,1), opacity .35s ease;
+}
+.feature__icon {
+  width: 52px; height: 52px; border-radius: 14px; background: var(--blue-soft);
+  display: grid; place-items: center; margin-bottom: 18px; color: var(--blue);
+  transition: background .3s ease, color .3s ease, transform .35s cubic-bezier(.2,.8,.2,1);
+}
+.feature__icon svg { width: 26px; height: 26px; }
+.feature h3 { font-size: 1.15rem; font-weight: 700; transition: color .3s ease, transform .35s cubic-bezier(.2,.8,.2,1); }
+.feature p { margin: 0; color: var(--muted); font-size: .96rem; transition: color .3s ease, transform .35s cubic-bezier(.2,.8,.2,1); }
+
+
+.feature:hover {
+  transform: translateY(-8px);
+  border-color: var(--blue);
+  box-shadow: 0 24px 48px rgba(4,137,235,.34), 0 6px 14px rgba(4,137,235,.2);
+}
+.feature:hover::before { opacity: 1; }
+.feature:hover::after { opacity: 1; transform: scale(1); }
+.feature:hover h3 { color: #fff; transform: translateX(3px); }
+.feature:hover p { color: rgba(255,255,255,.94); transform: translateX(3px); }
+.feature:hover .feature__icon { background: rgba(255,255,255,.2); color: #fff; transform: scale(1.1) rotate(-6deg); }
+
